@@ -16,7 +16,6 @@ const DocExperiment = () => {
         },
         show_progress_bar: true,
         default_iti: 250,
-        display_element: document.getElementById("doc-experiment"),
       });
 
       const preload = {
