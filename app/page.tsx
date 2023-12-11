@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import "jspsych/css/jspsych.css";
-import Experiment from "@/components/Experiment";
+
 import DocExperiment from "@/components/DocExperiment";
 
 type Props = {};
