@@ -1,16 +1,13 @@
-"use client";
-
 import React from "react";
-import "jspsych/css/jspsych.css";
 
-import DocExperiment from "@/components/DocExperiment";
+import dynamic from "next/dynamic";
+const DocExperiment = dynamic(() => import("@/components/DocExperiment"), {
+  ssr: false,
+});
 
-type Props = {};
-
-function HomePage({}: Props) {
+function HomePage({}) {
   return (
     <div>
-      {/* <Experiment /> */}
       <DocExperiment />
     </div>
   );
