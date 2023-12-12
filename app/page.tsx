@@ -7,7 +7,7 @@ const DocExperiment = dynamic(() => import("@/components/DocExperiment"), {
 
 function HomePage({}) {
   return (
-    <div>
+    <div className='w-full max-w-7xl mx-auto'>
       <DocExperiment />
     </div>
   );
