@@ -9,12 +9,16 @@
   .custom-circle {
     @apply flex flex-col md:flex-row items-center;
   }
+  .custom-redtext {
+    @apply text-red-800 text-xl;
+  }
 }
 
-/* .custom-container {
+.custom-container {
   height: 100vh;
   background-color: #f0f0f0;
-} */
+  width: 100%;
+}
 
 .custom-text {
   text-align: center;
