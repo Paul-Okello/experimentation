@@ -39,7 +39,7 @@ export const stroopStimuli = generateAllStimuli();
 export function interpretResults(accuracy: number, responseTime: number): string {
   let accuracyInterpretation: string = '';
   if (accuracy >= 80) {
-    accuracyInterpretation = `You demonstrated an excellent understanding, with an accuracy of ${accuracy}`;
+    accuracyInterpretation = `You demonstrated an excellent understanding, with an accuracy of ${accuracy}%`;
   } else if (accuracy >= 60) {
     accuracyInterpretation = `Your accuracy ${accuracy}%, showcasing a good grasp of the task!`;
   } else if (accuracy >= 40) {
