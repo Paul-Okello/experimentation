@@ -1,17 +1,23 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import htmlKeyboardResponse from "@jspsych/plugin-html-keyboard-response";
 import { initJsPsych } from "jspsych";
 import "jspsych/css/jspsych.css";
 import imageKeyboardResponse from "@jspsych/plugin-image-keyboard-response";
 import { interpretResults, stroopStimuli } from "@/lib/stroop";
+import { addToDb } from "@/actions/load-data";
+import Insights from "./Insights";
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 const DocExperiment = () => {
+  const [done, setDone] = useState(false);
   useEffect(() => {
     const jsPsych = initJsPsych({
       on_finish: () => {},
       default_iti: 250,
+      display_element: "doc-experiment",
     });
 
     const initializeExperiment = () => {
@@ -92,16 +98,20 @@ const DocExperiment = () => {
       const debriefBlock = {
         type: htmlKeyboardResponse,
         stimulus: () => {
-          const trials = jsPsych.data
-            .get()
-            .filter((item: any) => item.task === "response");
+          const trials = jsPsych.data.get().filter({ task: "stroop" });
+          console.log(jsPsych.data.get());
 
           const correctTrials = trials.filter({ correct: true });
           const accuracy = Math.round(
             (correctTrials.count() / trials.count()) * 100
           );
+
           const rt = Math.round(correctTrials.select("rt").mean());
           const result: string = interpretResults(accuracy, rt);
+          addToDb({
+            accuracy,
+            reactionTime: rt,
+          });
 
           return `
             <p>Thank you for participating in this experiment!</p>
@@ -118,9 +128,27 @@ const DocExperiment = () => {
     }
   }, []);
 
+  function handleRestart() {
+    setDone(false);
+    window.location.reload();
+  }
+
+  console.log(done);
+
   return (
-    <div id='doc-experiment' className='w-full'>
-      DocExperiment
+    <div className='w-full flex flex-col justify-center items-center'>
+      <div className='h-[50vh] mt-5' id='doc-experiment' />
+      <div className='flex justify-between max-w-lg gap-2'>
+        <Link href='/insights'>
+          <Button variant='outline' size='lg'>
+            Go to Insights
+          </Button>
+        </Link>
+
+        {done === true && (
+          <Button onClick={() => handleRestart()}>Restart Experiement</Button>
+        )}
+      </div>
     </div>
   );
 };
