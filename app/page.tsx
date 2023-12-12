@@ -1,6 +1,7 @@
 import React from "react";
 
 import dynamic from "next/dynamic";
+import Insights from "@/components/Insights";
 const DocExperiment = dynamic(() => import("@/components/DocExperiment"), {
   ssr: false,
 });
