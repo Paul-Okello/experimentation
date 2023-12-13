@@ -83,60 +83,60 @@ export const anagrams = [
     word: "Silent",
     original: "Listen",
   },
-  // {
-  //   sentence:
-  //     "The _______ was very friendly and helpful, making sure we had everything we needed for our stay.",
-  //   word: "Hostel",
-  //   original: "Tholes",
-  // },
-  // {
-  //   sentence:
-  //     "She was a _______ writer, producing several novels and short stories every year.",
-  //   word: "Prolific",
-  //   original: "Frolicpi",
-  // },
-  // {
-  //   sentence:
-  //     "The _______ of the cake was moist and fluffy, while the frosting was rich and creamy.",
-  //   word: "Layer",
-  //   original: "Early",
-  // },
-  // {
-  //   sentence:
-  //     "He had a _______ for music and could play several instruments by ear.",
-  //   word: "Flair",
-  //   original: "Frail",
-  // },
-  // {
-  //   sentence:
-  //     "The _______ was a popular tourist attraction, offering a panoramic view of the city.",
-  //   word: "Tower",
-  //   original: "Wrote",
-  // },
-  // {
-  //   sentence:
-  //     "The _______ was a complex puzzle that required logic and creativity to solve.",
-  //   word: "Enigma",
-  //   original: "Gamine",
-  // },
-  // {
-  //   sentence:
-  //     "The _______ was a beautiful sight, with colorful flowers and butterflies.",
-  //   word: "Garden",
-  //   original: "Danger",
-  // },
-  // {
-  //   sentence:
-  //     "The _______ was a skilled craftsman, making exquisite jewelry and ornaments.",
-  //   word: "Artisan",
-  //   original: "Tsarina",
-  // },
-  // {
-  //   sentence:
-  //     "The _______ was a dangerous place, full of wild animals and poisonous plants.",
-  //   word: "Jungle",
-  //   original: "Lungej",
-  // },
+  {
+    sentence:
+      "The _______ was very friendly and helpful, making sure we had everything we needed for our stay.",
+    word: "Hostel",
+    original: "Tholes",
+  },
+  {
+    sentence:
+      "She was a _______ writer, producing several novels and short stories every year.",
+    word: "Prolific",
+    original: "Frolicpi",
+  },
+  {
+    sentence:
+      "The _______ of the cake was moist and fluffy, while the frosting was rich and creamy.",
+    word: "Layer",
+    original: "Early",
+  },
+  {
+    sentence:
+      "He had a _______ for music and could play several instruments by ear.",
+    word: "Flair",
+    original: "Frail",
+  },
+  {
+    sentence:
+      "The _______ was a popular tourist attraction, offering a panoramic view of the city.",
+    word: "Tower",
+    original: "Wrote",
+  },
+  {
+    sentence:
+      "The _______ was a complex puzzle that required logic and creativity to solve.",
+    word: "Enigma",
+    original: "Gamine",
+  },
+  {
+    sentence:
+      "The _______ was a beautiful sight, with colorful flowers and butterflies.",
+    word: "Garden",
+    original: "Danger",
+  },
+  {
+    sentence:
+      "The _______ was a skilled craftsman, making exquisite jewelry and ornaments.",
+    word: "Artisan",
+    original: "Tsarina",
+  },
+  {
+    sentence:
+      "The _______ was a dangerous place, full of wild animals and poisonous plants.",
+    word: "Jungle",
+    original: "Lungej",
+  },
 ];
 
 
