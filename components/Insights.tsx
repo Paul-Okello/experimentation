@@ -42,7 +42,21 @@ function Insights({}: Props) {
     if (!loadingInsights && insights) {
       const fetchedData = insights.docs.map((doc) => doc.data()) as DataType[];
       console.log("Fetched Data-->", fetchedData);
-      setData(fetchedData);
+
+      // Sort the data and ensure only numbers are used
+      const filtered = fetchedData
+        .map((item) => {
+          if (typeof item.reactionTime !== "number") {
+            item.accuracy = 0;
+            item.reactionTime = 1500;
+          }
+          item.accuracy = Number(item.accuracy);
+          item.reactionTime = Number(item.reactionTime);
+          return item;
+        })
+        .sort((a, b) => a.accuracy - b.accuracy);
+      console.log("Filtered Data-->", filtered);
+      setData(filtered);
       setLoading(false);
     }
   }, [insights, loadingInsights]);

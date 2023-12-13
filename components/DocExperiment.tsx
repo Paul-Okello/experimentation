@@ -2,34 +2,17 @@
 
 import { useEffect, useState } from "react";
 import htmlKeyboardResponse from "@jspsych/plugin-html-keyboard-response";
-import surveyLikert from "@jspsych/plugin-survey-likert";
-import visualSearchCircle from "@jspsych/plugin-visual-search-circle";
-import webgazer from "@jspsych/extension-webgazer";
 import { initJsPsych } from "jspsych";
 import "jspsych/css/jspsych.css";
-import {
-  anagrams,
-  interpretResults,
-  isAnagram,
-  stroopStimuli,
-} from "@/lib/stroop";
+import { anagrams, interpretResults, isAnagram } from "@/lib/stroop";
 import { addToDb } from "@/actions/load-data";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import htmlButtonResponse from "@jspsych/plugin-html-button-response";
-import surveyMultiChoice from "@jspsych/plugin-survey-multi-choice";
 import surveyText from "@jspsych/plugin-survey-text";
-import { time } from "console";
 import toast from "react-hot-toast";
-import _ from "lodash";
 
 const DocExperiment = () => {
-  const [done, setDone] = useState(false);
-  const [responseTimes, setResponseTimes] = useState<number[]>([]);
-  const [accurateResponses, setAccurateResponses] = useState(0);
-
   function handleRestart() {
-    setDone(false);
     window.location.reload();
   }
   useEffect(() => {
@@ -223,10 +206,6 @@ const DocExperiment = () => {
             Go to Insights
           </Button>
         </Link>
-
-        {done === true && (
-          <Button onClick={() => handleRestart()}>Restart Experiement</Button>
-        )}
       </div>
     </div>
   );
