@@ -5,6 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@jmuchovej/jspsych-plugin-react':
+    specifier: ^0.0.1
+    version: 0.0.1
+  '@jspsych/extension-webgazer':
+    specifier: ^1.0.3
+    version: 1.0.3(jspsych@7.3.4)
+  '@jspsych/plugin-html-button-response':
+    specifier: ^1.1.3
+    version: 1.1.3(jspsych@7.3.4)
   '@jspsych/plugin-html-keyboard-response':
     specifier: ^1.1.3
     version: 1.1.3(jspsych@7.3.4)
@@ -12,6 +21,21 @@ dependencies:
     specifier: ^1.1.3
     version: 1.1.3(jspsych@7.3.4)
   '@jspsych/plugin-preload':
+    specifier: ^1.1.3
+    version: 1.1.3(jspsych@7.3.4)
+  '@jspsych/plugin-survey-html-form':
+    specifier: ^1.0.3
+    version: 1.0.3(jspsych@7.3.4)
+  '@jspsych/plugin-survey-likert':
+    specifier: ^1.1.3
+    version: 1.1.3(jspsych@7.3.4)
+  '@jspsych/plugin-survey-multi-choice':
+    specifier: ^1.1.3
+    version: 1.1.3(jspsych@7.3.4)
+  '@jspsych/plugin-survey-text':
+    specifier: ^1.1.3
+    version: 1.1.3(jspsych@7.3.4)
+  '@jspsych/plugin-visual-search-circle':
     specifier: ^1.1.3
     version: 1.1.3(jspsych@7.3.4)
   '@radix-ui/react-icons':
@@ -35,6 +59,9 @@ dependencies:
   jspsych:
     specifier: ^7.3.4
     version: 7.3.4
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -47,6 +74,9 @@ dependencies:
   react-firebase-hooks:
     specifier: ^5.1.1
     version: 5.1.1(firebase@10.7.1)(react@18.2.0)
+  react-hot-toast:
+    specifier: ^2.4.1
+    version: 2.4.1(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)
   recharts:
     specifier: ^2.10.3
     version: 2.10.3(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
@@ -58,6 +88,9 @@ dependencies:
     version: 1.0.7(tailwindcss@3.3.6)
 
 devDependencies:
+  '@types/lodash':
+    specifier: ^4.14.202
+    version: 4.14.202
   '@types/node':
     specifier: ^20
     version: 20.10.4
@@ -701,6 +734,14 @@ packages:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
 
+  /@jmuchovej/jspsych-plugin-react@0.0.1:
+    resolution: {integrity: sha512-uLNZMGdXW0ChB1mrRNMAF+1HTJlN4Qk5/qUT802PNp3ZFhWKhX85sS2ZfgE1l8/bz/xsCQrie8Lzfqw0CAFlUg==}
+    dependencies:
+      jspsych: 7.3.4
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
     engines: {node: '>=6.0.0'}
@@ -726,6 +767,22 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  /@jspsych/extension-webgazer@1.0.3(jspsych@7.3.4):
+    resolution: {integrity: sha512-XrorgYyWUr6A2KGxv2r2LXMYChDyp0rH16FSxr/lhHeQDvJmpKIiOfBHSfWSRPGzexKpb36kdzJhdY7qHdONAg==}
+    peerDependencies:
+      jspsych: '>=7.0.0'
+    dependencies:
+      jspsych: 7.3.4
+    dev: false
+
+  /@jspsych/plugin-html-button-response@1.1.3(jspsych@7.3.4):
+    resolution: {integrity: sha512-UFbmrroI0JtuM3Wd5t7/k5nResM+b1oxrhktKDhhmh6P/3RRcia51U6rtrJ0HKyrnnuNc3Smwr4XubdMW76VCg==}
+    peerDependencies:
+      jspsych: '>=7.1.0'
+    dependencies:
+      jspsych: 7.3.4
+    dev: false
+
   /@jspsych/plugin-html-keyboard-response@1.1.3(jspsych@7.3.4):
     resolution: {integrity: sha512-QlItqZRJJSYROvAVQzUlujjgcqFNimKTIoHu5qVM/HP2oJ1HLB4cQlWcntdwGeNBQGqDgFq8PBKBFCLvC/hFNg==}
     peerDependencies:
@@ -744,6 +801,46 @@ packages:
 
   /@jspsych/plugin-preload@1.1.3(jspsych@7.3.4):
     resolution: {integrity: sha512-yJ5M1oEQ8rUi4DsDCMLzvw+isCBL8Tj8O1NyY07IM8tJ75jQopT1kK32Puoqi214BrG9qFYScAYxUvkNqHtOHg==}
+    peerDependencies:
+      jspsych: '>=7.1.0'
+    dependencies:
+      jspsych: 7.3.4
+    dev: false
+
+  /@jspsych/plugin-survey-html-form@1.0.3(jspsych@7.3.4):
+    resolution: {integrity: sha512-4Zl4UiXLuBoO78PT02ELiVsyCUZk4RFsiVGJvW1DOYy+IttryLAAgQuSv68r1vbqsI0qaGfZEVND896ur9X+pw==}
+    peerDependencies:
+      jspsych: '>=7.1.0'
+    dependencies:
+      jspsych: 7.3.4
+    dev: false
+
+  /@jspsych/plugin-survey-likert@1.1.3(jspsych@7.3.4):
+    resolution: {integrity: sha512-2eN0fRXeXc3HiOZDZeToE+E464p6kJHKcpfOnSKDMbCZaEmArtowlyQsy3PO59eTzCGjEmrKFKdZ/ZuO3q6tgQ==}
+    peerDependencies:
+      jspsych: '>=7.1.0'
+    dependencies:
+      jspsych: 7.3.4
+    dev: false
+
+  /@jspsych/plugin-survey-multi-choice@1.1.3(jspsych@7.3.4):
+    resolution: {integrity: sha512-IdBERcuGq2s3KtEsKEr36PMt9Bd6md5Qta99x1EhWd2iHskAXaSrdWyYw2Q1KA5VfJE3eDpWncPBI3HuQVXzHg==}
+    peerDependencies:
+      jspsych: '>=7.1.0'
+    dependencies:
+      jspsych: 7.3.4
+    dev: false
+
+  /@jspsych/plugin-survey-text@1.1.3(jspsych@7.3.4):
+    resolution: {integrity: sha512-WZVZbQ0w2zpMF6nP546I1vmIIvqTvcS6WktiqrjFPj6FNMHR8JsT3YCHv7JBsOaoNAl1F9zhDevpiJuNXuqwpg==}
+    peerDependencies:
+      jspsych: '>=7.1.0'
+    dependencies:
+      jspsych: 7.3.4
+    dev: false
+
+  /@jspsych/plugin-visual-search-circle@1.1.3(jspsych@7.3.4):
+    resolution: {integrity: sha512-0DfDOQFLpTu789oTeP+E91cJ39bJWi5Qk9Gbs66cJ/9+YybzuZWui27G78ylg3EzWpzaUhv+f2W4femD0OzqNg==}
     peerDependencies:
       jspsych: '>=7.1.0'
     dependencies:
@@ -1058,6 +1155,10 @@ packages:
     dependencies:
       '@types/node': 20.10.4
     dev: false
+
+  /@types/lodash@4.14.202:
+    resolution: {integrity: sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==}
+    dev: true
 
   /@types/long@4.0.2:
     resolution: {integrity: sha512-MqTGEo5bj5t157U6fA/BiDynNkn0YknVdh48CMPkTSpFTVmvao5UQmm7uEF6xBEo7qIMAlY/JSleYaE6VOdpaA==}
@@ -2532,6 +2633,14 @@ packages:
       slash: 3.0.0
     dev: true
 
+  /goober@2.1.13(csstype@3.1.3):
+    resolution: {integrity: sha512-jFj3BQeleOoy7t93E9rZ2de+ScC4lQICLwiAQmKMg9F6roKGaLSHoCDYKkWlSafg138jejvq/mTdvmnwDQgqoQ==}
+    peerDependencies:
+      csstype: ^3.0.10
+    dependencies:
+      csstype: 3.1.3
+    dev: false
+
   /google-auth-library@9.4.1:
     resolution: {integrity: sha512-Chs7cuzDuav8W/BXOoRgSXw4u0zxYtuqAHETDR5Q6dG1RwNwz7NUKjsDDHAsBV3KkiiJBtJqjbzy1XU1L41w1g==}
     engines: {node: '>=14'}
@@ -3589,6 +3698,20 @@ packages:
     dependencies:
       firebase: 10.7.1
       react: 18.2.0
+    dev: false
+
+  /react-hot-toast@2.4.1(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-j8z+cQbWIM5LY37pR6uZR6D4LfseplqnuAO4co4u8917hBUvXlEqyP1ZzqVLcqoyUesZZv/ImreoCeHVDpE5pQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      goober: 2.1.13(csstype@3.1.3)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - csstype
     dev: false
 
   /react-is@16.13.1:
