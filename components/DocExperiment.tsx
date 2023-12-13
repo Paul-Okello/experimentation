@@ -99,9 +99,7 @@ const DocExperiment = () => {
 
     // Loop through each anagram and add trials to the timeline
 
-    const shuffledAnagrams = _.shuffle(anagrams);
-
-    console.log("shuffledAnagrams", shuffledAnagrams);
+    console.log("anagrams", anagrams);
     for (let i = 0; i < anagrams.length; i++) {
       // Add the fixation trial
       timeline.push(fixation_trial);
@@ -110,9 +108,9 @@ const DocExperiment = () => {
       timeline.push({
         on_start: function (trial: any) {
           const sentence =
-            shuffledAnagrams[i].sentence +
+            anagrams[i].sentence +
             ".  HINT: ANAGRAM:" +
-            shuffledAnagrams[i].original.toUpperCase();
+            anagrams[i].original.toUpperCase();
           // Set the prompt dynamically with the updated sentence
           trial.questions[0].prompt = sentence;
         },
@@ -121,7 +119,7 @@ const DocExperiment = () => {
           const response = jsPsych.data.get().last(1).values()[0].response.Q0;
 
           console.log("response", response);
-          const original = shuffledAnagrams[i].original;
+          const original = anagrams[i].original;
           console.log("original", original);
           // Check the accuracy of the response
           const accuracy = response.toUpperCase() === original.toUpperCase();
